@@ -370,10 +370,10 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Prebuilts
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     GoogleCamera
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/system/etc/permissions/com.google.android.GoogleCameraEng.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.GoogleCameraEng.xml
 
 
@@ -547,9 +547,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
+# Remove unwanted packages
+#PRODUCT_PACKAGES += \
+    RemovePackages
+
+    
 # NezukoOS
-NEZUKO_BUILD_TYPE := OFFICIAL
-NEZUKO_MAINTAINER := Maitreya29
+#NEZUKO_BUILD_TYPE := OFFICIAL
+#NEZUKO_MAINTAINER := Maitreya29
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
